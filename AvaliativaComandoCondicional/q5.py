@@ -1,10 +1,11 @@
 try:
+    
     dia = int(input("Digite o dia: "))
     mes = int(input("Digite o mês: "))
     ano = int(input("Digite o ano: "))
 
     if mes < 1 or mes > 12:
-        print("Esse mês é inválido!")
+        print("Esse mês não é válido!")
     else:
         bissexto = (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0)
         if bissexto == True: 
@@ -12,7 +13,7 @@ try:
         else:
             if bissexto == False:
                 anoB = 365
-                
+
     if mes == 1:
         dias_antes = 0
         dias_do_mes = 31
@@ -51,9 +52,10 @@ try:
         dias_do_mes = 31
 
     if dia < 1 or dia > dias_do_mes:
-        print("Dia inválido!")
+        print("Esse dia não é válido!")
     else:
         dia_juliano = dias_antes + dia
         print("A data",dia,"/",mes,"/",ano, "corresponde ao dia juliano",dia_juliano, "de", anoB, "dias")
+
 except ValueError:
-    print("Informe a data correta")
+    print("Informe uma data correta")
