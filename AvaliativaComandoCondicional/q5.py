@@ -16,46 +16,46 @@ try:
 
     if mes == 1:
         dias_antes = 0
-        dias_do_mes = 31
+        diasM = 31
     elif mes == 2:
         dias_antes = 31
-        dias_do_mes = 29 if bissexto else 28
+        diasM = 29 if bissexto else 28
     elif mes == 3:
         dias_antes = 31 + (29 if bissexto else 28)
-        dias_do_mes = 31
+        diasM = 31
     elif mes == 4:
         dias_antes = 31 + (29 if bissexto else 28) + 31
-        dias_do_mes = 30
+        diasM = 30
     elif mes == 5:
         dias_antes = 31 + (29 if bissexto else 28) + 31 + 30
-        dias_do_mes = 31
+        diasM = 31
     elif mes == 6:
         dias_antes = 31 + (29 if bissexto else 28) + 31 + 30 + 31
-        dias_do_mes = 30
+        diasM = 30
     elif mes == 7:
         dias_antes = 31 + (29 if bissexto else 28) + 31 + 30 + 31 + 30
-        dias_do_mes = 31
+        diasM = 31
     elif mes == 8:
         dias_antes = 31 + (29 if bissexto else 28) + 31 + 30 + 31 + 30 + 31
-        dias_do_mes = 31
+        diasM = 31
     elif mes == 9:
         dias_antes = 31 + (29 if bissexto else 28) + 31 + 30 + 31 + 30 + 31 + 31
-        dias_do_mes = 30
+        diasM = 30
     elif mes == 10:
         dias_antes = 31 + (29 if bissexto else 28) + 31 + 30 + 31 + 30 + 31 + 31 + 30
-        dias_do_mes = 31
+        diasM = 31
     elif mes == 11:
         dias_antes = 31 + (29 if bissexto else 28) + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31
-        dias_do_mes = 30
+        diasM = 30
     elif mes == 12:
         dias_antes = 31 + (29 if bissexto else 28) + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30
-        dias_do_mes = 31
+        diasM = 31
 
-    if dia < 1 or dia > dias_do_mes:
+    if dia < 1 or dia > diasM:
         print("Esse dia não é válido!")
     else:
-        dia_juliano = dias_antes + dia
-        print("A data",dia,"/",mes,"/",ano, "corresponde ao dia juliano",dia_juliano, "de", anoB, "dias")
+        diaJ = dias_antes + dia
+        print("A data",dia,"/",mes,"/",ano, "corresponde ao dia juliano",diaJ, "de", anoB, "dias")
 
 except ValueError:
     print("Informe uma data correta")
