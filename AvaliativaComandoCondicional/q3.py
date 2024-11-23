@@ -1,4 +1,5 @@
 try:
+    
     # Sorteia um número entre 1 e 100 esse é o primeiro procedimento 
     # Importar a biblioteca para utilizarmos o randint
     import random
@@ -22,15 +23,14 @@ try:
     elif palpite > numero_sorteado:
         intervalo_max = (palpite - 1) 
         print ('Você errou tenta novamente um numero entr',  intervalo_min, 'a', intervalo_max)
-    # Em suma o código a partir de agora será repetido mais 3 vezes que será o limite de apostas
 
     palpite = int(input('Digite seu palpite: '))
     if palpite == numero_sorteado:
-        palpite != numero_sorteado
         print('Você acertou o número tenta agora na mega da virada',  numero_sorteado)
+    # Em suma o código a partir de agora será repetido mais 3 vezes que será o limite de apostas
     
     elif palpite < numero_sorteado:
-        intervalo_min =  palpite
+        intervalo_min =  (palpite + 1)
         print ( 'Você errou tente novamente um numero entre',  intervalo_min, 'a', intervalo_max) 
 
     elif palpite > numero_sorteado:
